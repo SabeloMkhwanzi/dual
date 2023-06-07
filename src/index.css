@@ -1,13 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Kumbh+Sans:wght@300;400;700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,500;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.font-pop {
+  font-family: "Poppins";
+}
+
+.form-css {
+  @apply bg-inherit shadow-md rounded-lg py-8 px-6 flex flex-col gap-4;
+}
+
+.bttn {
+  @apply w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md;
+}
+
+.bttn-2 {
+  @apply w-fit flex items-center justify-center px-6 py-1.5 border border-transparent text-base font-medium rounded-md;
+}
+
+.bttn-3 {
+  @apply w-full lg:w-fit flex items-center justify-center px-4 py-2 lg:px-2 border border-transparent text-base font-medium rounded-md;
+}
+
+.bttn-4 {
+  @apply w-fit flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md;
+}
+
+.bttn-5 {
+  @apply flex items-center justify-center px-2 py-2 border border-transparent text-xs sm:text-sm font-medium rounded-md;
+}
+
+.bttn-primary {
+  @apply text-white bg-indigo-600 hover:bg-indigo-700 md:text-base;
+}
+
+.bttn-primary-2 {
+  @apply text-white bg-indigo-600 hover:bg-indigo-700;
+}
+
+.bttn-secondary {
+  @apply text-indigo-700 bg-indigo-300 hover:bg-indigo-200 md:text-base;
+}
+
+.bttn-secondary-2 {
+  @apply text-indigo-700 bg-indigo-300 hover:bg-indigo-200;
+}
+
+.bttn-artist {
+  @apply bg-inherit border-2 border-indigo-500 hover:bg-indigo-500 hover:border-transparent;
+}
+
+.bg-ld {
+  @apply bg-slate-100 dark:bg-[#202020];
+}
+
+.bg-ld-nft {
+  @apply bg-slate-100 dark:bg-slate-800;
+}
+
+.bg-nav {
+  @apply bg-slate-100 dark:bg-slate-900;
+}
+
+.text-ld {
+  @apply text-slate-900 dark:text-slate-100;
+}
+
+.text-ind {
+  @apply text-indigo-700 dark:text-indigo-500;
+}
+
+.text-small {
+  @apply text-slate-600 dark:text-slate-100;
+}
+
+.form-input {
+  @apply w-full border bg-transparent text-ld text-sm border-gray-300 px-3 py-2 rounded shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 placeholder-transparent;
+}
+
+.form-label {
+  @apply font-medium text-indigo-500 absolute left-3 -top-4 px-2 text-xs bg-inherit peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 dark:peer-placeholder-shown:text-gray-200 peer-placeholder-shown:font-medium peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-placeholder-shown:mt-0 peer-focus:left-3 peer-focus:bg-inherit peer-focus:-top-2 peer-focus:px-2 peer-focus:text-indigo-500 peer-focus:text-xs peer-focus:font-medium;
+}
+
+.trans {
+  @apply transition-all duration-300 ease-in;
+}
+
+.ninety-vh {
+  height: 90vh;
+}
+
+.eighty-vh {
+  height: 70vh;
+}
+
+.shadow-me {
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 8%), 0 2px 2px hsl(0deg 0% 0% / 8%),
+    0 4px 4px hsl(0deg 0% 0% / 8%), 0 8px 8px hsl(0deg 0% 0% / 8%),
+    0 16px 16px hsl(0deg 0% 0% / 8%);
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Kumbh+Sans:wght@300;400;700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,500;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.font-pop {
+  font-family: "Poppins";
+}
+
+.form-css {
+  @apply bg-inherit shadow-md rounded-lg py-8 px-6 flex flex-col gap-4;
+}
+
+.bttn {
+  @apply w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md;
+}
+
+.bttn-2 {
+  @apply w-fit flex items-center justify-center px-6 py-1.5 border border-transparent text-base font-medium rounded-md;
+}
+
+.bttn-3 {
+  @apply w-full lg:w-fit flex items-center justify-center px-4 py-2 lg:px-2 border border-transparent text-base font-medium rounded-md;
+}
+
+.bttn-4 {
+  @apply w-fit flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md;
+}
+
+.bttn-5 {
+  @apply flex items-center justify-center px-2 py-2 border border-transparent text-xs sm:text-sm font-medium rounded-md;
+}
+
+.bttn-primary {
+  @apply text-white bg-indigo-600 hover:bg-indigo-700 md:text-base;
+}
+
+.bttn-primary-2 {
+  @apply text-white bg-indigo-600 hover:bg-indigo-700;
+}
+
+.bttn-secondary {
+  @apply text-indigo-700 bg-indigo-300 hover:bg-indigo-200 md:text-base;
+}
+
+.bttn-secondary-2 {
+  @apply text-indigo-700 bg-indigo-300 hover:bg-indigo-200;
+}
+
+.bttn-artist {
+  @apply bg-inherit border-2 border-indigo-500 hover:bg-indigo-500 hover:border-transparent;
+}
+
+.bg-ld {
+  @apply bg-slate-100 dark:bg-[#202020];
+}
+
+.bg-ld-nft {
+  @apply bg-slate-100 dark:bg-slate-800;
+}
+
+.bg-nav {
+  @apply bg-slate-100 dark:bg-slate-900;
+}
+
+.text-ld {
+  @apply text-slate-900 dark:text-slate-100;
+}
+
+.text-ind {
+  @apply text-indigo-700 dark:text-indigo-500;
+}
+
+.text-small {
+  @apply text-slate-600 dark:text-slate-100;
+}
+
+.form-input {
+  @apply w-full border bg-transparent text-ld text-sm border-gray-300 px-3 py-2 rounded shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 placeholder-transparent;
+}
+
+.form-label {
+  @apply font-medium text-indigo-500 absolute left-3 -top-4 px-2 text-xs bg-inherit peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 dark:peer-placeholder-shown:text-gray-200 peer-placeholder-shown:font-medium peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-placeholder-shown:mt-0 peer-focus:left-3 peer-focus:bg-inherit peer-focus:-top-2 peer-focus:px-2 peer-focus:text-indigo-500 peer-focus:text-xs peer-focus:font-medium;
+}
+
+.trans {
+  @apply transition-all duration-300 ease-in;
+}
+
+.ninety-vh {
+  height: 90vh;
+}
+
+.eighty-vh {
+  height: 70vh;
+}
+
+.shadow-me {
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 8%), 0 2px 2px hsl(0deg 0% 0% / 8%),
+    0 4px 4px hsl(0deg 0% 0% / 8%), 0 8px 8px hsl(0deg 0% 0% / 8%),
+    0 16px 16px hsl(0deg 0% 0% / 8%);
 }
