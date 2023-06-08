@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+## Dual
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Dual is a social marketplace for gamers on FEVM, dedicated to NFT GameFi. It aims to facilitate gamers in discovering and trading their in-game NFT rewards through engaging dual battles. Within these battles, participants have the chance to claim and retain the NFT as a prize, or alternatively, trade it on the Dual platform
 
-## Available Scripts
+### Project Description
 
-In the project directory, you can run:
+This project enables gamers to upload their gaming NFT rewards to the platform, which are securely stored on the Filecoin network using web3.storage. Each gamer has a profile that showcases a comprehensive bio and other relevant information, allowing fellow gamers to gain insights into their background and capabilities, providing a better understanding of their opponents.
 
-### `npm start`
+Gamers have the option to upload their gaming NFT collections onto the platform, engaging in dual battles with other gamers to trade these unique assets. The utilization of the ERC1155 token standard allows gamers to create exclusive limited edition collections, fostering a highly competitive environment for engaging in challenging battles. These NFTs hold significant value on our platform, extending beyond mere speculative investments.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+When a gamer emerges victorious in a dual challenge, they can choose to either claim the NFT prize or retain it for potential future sales at a higher price. Our platform empowers gamers to monetize their hard-earned NFTs while fostering connections with fellow gamers, all within a social environment that enables them to build a dedicated audience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Mission & Purpose
 
-### `npm test`
+Our platform is dedicated to empowering gamers to trade their collections on the decentralized Filecoin network, ensuring a censorship-resistant environment. Furthermore, it provides a platform for gamers to cultivate a thriving community, allowing them to continuously enhance their skills, achievements, and overall quality, thereby attracting a larger following and increasing viewership.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+We leverage the decentralized storage of Filecoin through web3.storage to securely and reliably store gamers' profiles and their collection data. This ensures that gamers' information and collections are effectively stored in a secure and persistent manner
 
-### `npm run build`
+### How it's Made
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Smart Contract
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- The project used the open zeppelin ERC1155 token standard to implement the collections. The factory contract handles the creation of every collection on the DualNFT platform.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Decentralized Storage
 
-### `npm run eject`
+- All Gamers content are saved on Filecoin storage using web3.storage to store and retrieve data.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### The frontend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- was built with ReactJS, Javascript, wagmi, ethersJS and rainbow toolkit. Queries were made to the smart contracts which were deployed to the Filecoin blockchain.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Social Features
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- We use Livepeer for Gamers to stream there game which also allows audience to view the game challenges.
+- We also used Huddle01 for Gamer to set up meetings for the arrangement.
+- And we also used Push Protocol to send notification when new Collection are uploaded, Push Chat for Gamers to communicate with each other.
