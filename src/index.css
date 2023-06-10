@@ -13,11 +13,11 @@ body {
 }
 
 .form-css {
-  @apply bg-inherit shadow-md rounded-lg py-8 px-6 flex flex-col gap-4;
+  @apply flex flex-col gap-4 px-6 py-8 rounded-lg shadow-md bg-inherit;
 }
 
 .bttn {
-  @apply w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md;
+  @apply flex items-center justify-center w-full px-8 py-3 text-base font-medium border border-transparent rounded-md;
 }
 
 .bttn-2 {
@@ -25,15 +25,15 @@ body {
 }
 
 .bttn-3 {
-  @apply w-full lg:w-fit flex items-center justify-center px-4 py-2 lg:px-2 border border-transparent text-base font-medium rounded-md;
+  @apply flex items-center justify-center w-full px-4 py-2 text-base font-medium border border-transparent rounded-md lg:w-fit lg:px-2;
 }
 
 .bttn-4 {
-  @apply w-fit flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md;
+  @apply flex items-center justify-center px-8 py-3 text-base font-medium border border-transparent rounded-md w-fit;
 }
 
 .bttn-5 {
-  @apply flex items-center justify-center px-2 py-2 border border-transparent text-xs sm:text-sm font-medium rounded-md;
+  @apply flex items-center justify-center px-2 py-2 text-xs font-medium border border-transparent rounded-md sm:text-sm;
 }
 
 .bttn-primary {
@@ -52,8 +52,8 @@ body {
   @apply text-indigo-700 bg-indigo-300 hover:bg-indigo-200;
 }
 
-.bttn-artist {
-  @apply bg-inherit border-2 border-indigo-500 hover:bg-indigo-500 hover:border-transparent;
+.bttn-Gamer {
+  @apply border-2 border-indigo-500 bg-inherit hover:bg-indigo-500 hover:border-transparent;
 }
 
 .bg-ld {
@@ -81,11 +81,11 @@ body {
 }
 
 .form-input {
-  @apply w-full border bg-transparent text-ld text-sm border-gray-300 px-3 py-2 rounded shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 placeholder-transparent;
+  @apply w-full px-3 py-2 text-sm placeholder-transparent bg-transparent border border-gray-300 rounded shadow-sm text-ld focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500;
 }
 
 .form-label {
-  @apply font-medium text-indigo-500 absolute left-3 -top-4 px-2 text-xs bg-inherit peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 dark:peer-placeholder-shown:text-gray-200 peer-placeholder-shown:font-medium peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-placeholder-shown:mt-0 peer-focus:left-3 peer-focus:bg-inherit peer-focus:-top-2 peer-focus:px-2 peer-focus:text-indigo-500 peer-focus:text-xs peer-focus:font-medium;
+  @apply absolute px-2 text-xs font-medium text-indigo-500 left-3 -top-4 bg-inherit peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 dark:peer-placeholder-shown:text-gray-200 peer-placeholder-shown:font-medium peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-placeholder-shown:mt-0 peer-focus:left-3 peer-focus:bg-inherit peer-focus:-top-2 peer-focus:px-2 peer-focus:text-indigo-500 peer-focus:text-xs peer-focus:font-medium;
 }
 
 .trans {
@@ -120,11 +120,11 @@ body {
 }
 
 .form-css {
-  @apply bg-inherit shadow-md rounded-lg py-8 px-6 flex flex-col gap-4;
+  @apply flex flex-col gap-4 px-6 py-8 rounded-lg shadow-md bg-inherit;
 }
 
 .bttn {
-  @apply w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md;
+  @apply flex items-center justify-center w-full px-8 py-3 text-base font-medium border border-transparent rounded-md;
 }
 
 .bttn-2 {
@@ -132,15 +132,15 @@ body {
 }
 
 .bttn-3 {
-  @apply w-full lg:w-fit flex items-center justify-center px-4 py-2 lg:px-2 border border-transparent text-base font-medium rounded-md;
+  @apply flex items-center justify-center w-full px-4 py-2 text-base font-medium border border-transparent rounded-md lg:w-fit lg:px-2;
 }
 
 .bttn-4 {
-  @apply w-fit flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md;
+  @apply flex items-center justify-center px-8 py-3 text-base font-medium border border-transparent rounded-md w-fit;
 }
 
 .bttn-5 {
-  @apply flex items-center justify-center px-2 py-2 border border-transparent text-xs sm:text-sm font-medium rounded-md;
+  @apply flex items-center justify-center px-2 py-2 text-xs font-medium border border-transparent rounded-md sm:text-sm;
 }
 
 .bttn-primary {
@@ -159,8 +159,8 @@ body {
   @apply text-indigo-700 bg-indigo-300 hover:bg-indigo-200;
 }
 
-.bttn-artist {
-  @apply bg-inherit border-2 border-indigo-500 hover:bg-indigo-500 hover:border-transparent;
+.bttn-Gamer {
+  @apply border-2 border-indigo-500 bg-inherit hover:bg-indigo-500 hover:border-transparent;
 }
 
 .bg-ld {
@@ -188,11 +188,11 @@ body {
 }
 
 .form-input {
-  @apply w-full border bg-transparent text-ld text-sm border-gray-300 px-3 py-2 rounded shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 placeholder-transparent;
+  @apply w-full px-3 py-2 text-sm placeholder-transparent bg-transparent border border-gray-300 rounded shadow-sm text-ld focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500;
 }
 
 .form-label {
-  @apply font-medium text-indigo-500 absolute left-3 -top-4 px-2 text-xs bg-inherit peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 dark:peer-placeholder-shown:text-gray-200 peer-placeholder-shown:font-medium peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-placeholder-shown:mt-0 peer-focus:left-3 peer-focus:bg-inherit peer-focus:-top-2 peer-focus:px-2 peer-focus:text-indigo-500 peer-focus:text-xs peer-focus:font-medium;
+  @apply absolute px-2 text-xs font-medium text-indigo-500 left-3 -top-4 bg-inherit peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 dark:peer-placeholder-shown:text-gray-200 peer-placeholder-shown:font-medium peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-placeholder-shown:mt-0 peer-focus:left-3 peer-focus:bg-inherit peer-focus:-top-2 peer-focus:px-2 peer-focus:text-indigo-500 peer-focus:text-xs peer-focus:font-medium;
 }
 
 .trans {
@@ -211,4 +211,20 @@ body {
   box-shadow: 0 1px 1px hsl(0deg 0% 0% / 8%), 0 2px 2px hsl(0deg 0% 0% / 8%),
     0 4px 4px hsl(0deg 0% 0% / 8%), 0 8px 8px hsl(0deg 0% 0% / 8%),
     0 16px 16px hsl(0deg 0% 0% / 8%);
+}
+
+@font-face {
+  font-family: ultra;
+  src: url(../public/Petrona-Regular.ttf);
+}
+.ultra {
+  font-family: ultra;
+}
+
+@font-face {
+  font-family: fdkRegular;
+  src: url(../public/FredokaOne-Regular.ttf);
+}
+.fdkRegular {
+  font-family: fdkRegular;
 }

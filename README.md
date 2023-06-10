@@ -1,6 +1,6 @@
 ## Dual
 
-Dual is a social marketplace for gamers on FEVM, dedicated to NFT GameFi. It aims to facilitate gamers in discovering and trading their in-game NFT rewards through engaging dual battles. Within these battles, participants have the chance to claim and retain the NFT as a prize, or alternatively, trade it on the Dual platform
+Dual is a social marketplace for gamers on FEVM, dedicated to NFT GameFi. It aims to facilitate gamers in discovering and trading their in-game NFT rewards through engaging dual battles. Within these battles, participants have the chance to claim and retain the NFT as a prize, or alternatively, trade it on the Dual or other platforms.
 
 ### Project Description
 

@@ -1,8 +1,9 @@
 export const filecoin = {
-  id: 3141,
-  name: "FIL Hyperspace",
+  id: 314159,
+  name: "FIL Calibration",
   network: "filecoin",
-  iconUrl: "https://filfox.info/favicon.ico",
+  iconUrl:
+    "https://assets.coingecko.com/coins/images/12817/small/filecoin.png?1602753933",
   iconBackground: "#333",
   nativeCurrency: {
     decimals: 18,
@@ -11,14 +12,14 @@ export const filecoin = {
   },
   rpcUrls: {
     default: {
-      http: [
-        "https://filecoin-hyperspace.chainstacklabs.com/rpc/v1",
-        // "https://api.hyperspace.node.glif.io/rpc/v1",
-      ],
+      http: ["https://filecoin-calibration.chainup.net/rpc/v1"],
     },
   },
   blockExplorers: {
-    default: { name: "Filfox", url: "https://hyperspace.filfox.info/en" },
+    default: {
+      name: "Filfox",
+      url: "https://calibration.filfox.info/en",
+    },
   },
   testnet: true,
 };

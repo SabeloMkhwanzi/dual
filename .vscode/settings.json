@@ -1,4 +1,24 @@
 {
   "cSpell.ignoreWords": ["wagmi"],
-  "cSpell.words": ["FEVM", "Filecoin", "filecoin’s", "Fillion"]
+  "cSpell.words": [
+    "duallogo",
+    "FEVM",
+    "Filecoin",
+    "filecoin’s",
+    "Filfox",
+    "Fillion",
+    "headlessui",
+    "heroicons",
+    "mantine",
+    "Mantine",
+    "Meetingroom",
+    "Navbarheader",
+    "petrona",
+    "Petrona",
+    "rainbowkit",
+    "Roboto",
+    "streamingroom",
+    "Streamingroom",
+    "Streamroom"
+  ]
 }

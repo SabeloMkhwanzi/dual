@@ -1,6 +1,5 @@
 import React from "react";
 import App from "./App";
-import { ChakraProvider } from "@chakra-ui/react";
 import "@rainbow-me/rainbowkit/styles.css";
 import {
   RainbowKitProvider,
@@ -18,7 +17,7 @@ const { chains, provider, webSocketProvider } = configureChains(
   /**@notice This is Alchemy's default API key.
       You can get your own at https://dashboard.alchemyapi.io */
   [
-    alchemyProvider({ apiKey: "_gg7wSSi0KMBsdKnGVfHDueq6xMB9EkC" }),
+    alchemyProvider({ apiKey: "bEMWCe04MJ2C_CgSPrXdiYOcmGj_4jRP" }),
     publicProvider(),
     jsonRpcProvider({
       rpc: (chain) => {
@@ -30,7 +29,7 @@ const { chains, provider, webSocketProvider } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: "Fillion",
+  appName: "Dual GameFi",
   chains,
 });
 
@@ -43,21 +42,19 @@ const wagmiClient = createClient({
 
 const RainbowAppWrapper = () => {
   return (
-    <ChakraProvider>
-      <WagmiConfig client={wagmiClient}>
-        <RainbowKitProvider
-          chains={chains}
-          theme={lightTheme({
-            accentColor: "#4F46E5",
-            accentColorForeground: "white",
-            borderRadius: "medium",
-            fontStack: "system",
-          })}
-        >
-          <App />
-        </RainbowKitProvider>
-      </WagmiConfig>
-    </ChakraProvider>
+    <WagmiConfig client={wagmiClient}>
+      <RainbowKitProvider
+        chains={chains}
+        theme={lightTheme({
+          accentColor: "#4F46E5",
+          accentColorForeground: "white",
+          borderRadius: "medium",
+          fontStack: "system",
+        })}
+      >
+        <App />
+      </RainbowKitProvider>
+    </WagmiConfig>
   );
 };
 
