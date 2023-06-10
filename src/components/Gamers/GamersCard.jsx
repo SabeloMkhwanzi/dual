@@ -2,10 +2,82 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 //import { getJSONFromCID } from "../../utils/storage";
 
+import { IconEye, IconMessageCircle } from "@tabler/icons-react";
+import {
+  Card,
+  Text,
+  Group,
+  Center,
+  createStyles,
+  rem,
+  Button,
+} from "@mantine/core";
+
+import rn from "random-number";
+
+const useStyles = createStyles((theme) => ({
+  card: {
+    position: "relative",
+    height: rem(350),
+    backgroundColor:
+      theme.colorScheme === "dark"
+        ? theme.colors.dark[6]
+        : theme.colors.gray[0],
+    transition: "transform 100ms ease, box-shadow 100ms ease",
+    "&:hover": {
+      transform: "scale(1.01)",
+      boxShadow: theme.shadows.md,
+    },
+  },
+
+  imageDisplay: {
+    ...theme.fn.cover(),
+    backgroundSize: "cover",
+    transition: "transform 500ms ease",
+  },
+
+  overlay: {
+    position: "absolute",
+    top: "20%",
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundImage:
+      "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .85) 90%)",
+  },
+
+  content: {
+    height: "100%",
+    position: "relative",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-end",
+    zIndex: 1,
+  },
+
+  title: {
+    color: theme.white,
+    marginBottom: rem(5),
+    fontFamily: "jiggies",
+  },
+
+  bodyText: {
+    color: theme.colors.dark[2],
+    marginLeft: rem(7),
+  },
+
+  author: {
+    color: theme.colors.dark[2],
+  },
+}));
+
 function GamersCard({ artist }) {
   const [name, setName] = useState(null);
   const [bio, setBio] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
+  // Styling
+  const { classes, theme } = useStyles();
+
   let { artistAddress, artistDetails, dateJoined, id } = artist;
   //convert id from hex to int
   let idHex = id.toHexString();
@@ -43,34 +115,73 @@ function GamersCard({ artist }) {
     bio,
   };
 
+  //Random number for date using npm = random-number
+  var options = {
+    min: 4,
+    max: 50,
+    integer: true,
+  };
+
   return (
-    <div className=" dark:bg-inherit flex flex-col gap-2 relative w-full h-[300px] sm:h-[380px] rounded-lg overflow-hidden trans shadow-md cursor-pointer border-2 border-transparent dark:border-slate-700">
-      <div className="w-full h-[55%] sm:h-[65%]">
+    <div className="relative flex flex-col gap-2">
+      <Card p="lg" shadow="xl" className={classes.card} radius="md">
         <img
+          className={classes.imageDisplay}
           src={
             imageUrl
               ? `https://ipfs.io/ipfs/${imageUrl}`
               : "https://ipfs.io/ipfs/bafybeih2y7l7drbfuh45yjdqjgrucfjampulfen2kwefkwcfe3emsz2exu"
           }
           alt=""
-          className="object-cover object-center w-full h-full"
           loading="lazy"
         />
-      </div>
-      <div className="flex flex-col items-center justify-center w-full gap-2 p-4">
-        <p className="text-center text-base font-semibold text-indigo-700 dark:text-[#ffffff] flex items-center gap-2 pb-2">
-          {name}
-        </p>
-        <Link
-          to={{
-            pathname: `/gamer/${artistAddress}`,
-          }}
-          state={{ object }}
-          className="bttn bttn-artist text-indigo-500 hover:text-[#ffffff] trans "
-        >
-          View Profile
-        </Link>
-      </div>
+        <div className={classes.overlay} />
+        <div className={classes.content}>
+          <div>
+            <Text size="lg" className={classes.title} weight={500}>
+              {name}
+            </Text>
+
+            <Group position="apart" spacing="xs">
+              <Group spacing="lg">
+                <Center>
+                  <IconEye
+                    size="1rem"
+                    stroke={1.5}
+                    color={theme.colors.dark[2]}
+                  />
+                  <Text size="sm" className={classes.bodyText}>
+                    {rn(options)}
+                  </Text>
+                </Center>
+                <Center>
+                  <IconMessageCircle
+                    size="1rem"
+                    stroke={1.5}
+                    color={theme.colors.dark[2]}
+                  />
+                  <Text size="sm" className={classes.bodyText}>
+                    {rn(options)}
+                  </Text>
+                  <Link
+                    to={{
+                      pathname: `/gamer/${artistAddress}`,
+                    }}
+                    state={{ object }}
+                    className="bttn bttn-artist text-indigo-500 hover:text-[#ffffff] trans "
+                  >
+                    <Button borderRadius="lg" variant="subtle">
+                      <Text className="ultra" size="sm">
+                        View Profile
+                      </Text>
+                    </Button>
+                  </Link>
+                </Center>
+              </Group>
+            </Group>
+          </div>
+        </div>
+      </Card>
     </div>
   );
 }

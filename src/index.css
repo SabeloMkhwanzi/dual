@@ -222,9 +222,9 @@ body {
 }
 
 @font-face {
-  font-family: fdkRegular;
+  font-family: jiggies;
   src: url(../public/FredokaOne-Regular.ttf);
 }
 .fdkRegular {
-  font-family: fdkRegular;
+  font-family: jiggies;
 }

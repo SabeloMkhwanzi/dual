@@ -52,7 +52,7 @@ function GamersPage() {
             <p className="text-center text-xl md:text-2xl dark:text-[#ffffff] font-medium">
               {name}
             </p>
-            <MdVerified className="w-6 h-6 text-blue-600 " />
+            <MdVerified className="w-6 h-6 white-600 " />
           </div>
           <p className="text-center text-sm md:text-base dark:text-[#ffffff]">
             {bio}

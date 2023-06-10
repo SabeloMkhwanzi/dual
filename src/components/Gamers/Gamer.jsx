@@ -5,7 +5,17 @@ import { ARTIST_CONTRACT_ADDRESS, ARTIST_ABI } from "../../constants/index";
 import GamersCard from "./GamersCard";
 import FetchingGamersModal from "../Modals/FetchingGamersModal";
 
-function ArtistsAndCreators() {
+import { Text, createStyles, rem } from "@mantine/core";
+
+const useStyles = createStyles((theme) => ({
+  title: {
+    color: theme.white,
+    marginBottom: rem(5),
+    fontFamily: "jiggies",
+  },
+}));
+
+function Gamer() {
   const provider = useProvider();
   const signer = useSigner();
   const { isConnected } = useAccount();
@@ -15,6 +25,9 @@ function ArtistsAndCreators() {
     contractInterface: ARTIST_ABI,
     signerOrProvider: signer.data || provider,
   });
+
+  // Mantine-ui Styling
+  const { classes, theme } = useStyles();
 
   const [artists, setArtists] = useState([]);
   const [fetchingArtists, setFetchingArtists] = useState(false);
@@ -41,9 +54,9 @@ function ArtistsAndCreators() {
     return (
       <>
         <div className="flex items-center justify-center min-h-screen">
-          <h1 className="text-base text-ld md:text-3xl">
+          <Text style={{ fontFamily: "jiggies" }}>
             Please connect your wallet to continue
-          </h1>
+          </Text>
         </div>
       </>
     );
@@ -52,9 +65,12 @@ function ArtistsAndCreators() {
       <>
         {fetchingArtists ? <FetchingGamersModal /> : null}
         <div className="min-h-screen p-8 trans">
-          <h1 className="text-indigo-700 dark:text-[#ffffff] text-center font-semibold mt-8 text-2xl sm:text-3xl md:text-4xl trans">
-            Meet Our Gamers for Dual Battle
-          </h1>
+          <Text
+            style={{ fontFamily: "jiggies" }}
+            className="mt-8 text-2xl font-semibold text-center sm:text-3xl md:text-4xl trans"
+          >
+            Meet Our Gamers ready for Dual Battle
+          </Text>
           <ul className="grid grid-cols-1 gap-y-4 gap-x-4 lg:gap-x-6 md:grid-cols-2 lg:grid-cols-3 w-[90%] sm:w-[55%] md:w-[80%] mx-auto mt-8 max-w-6xl pb-8">
             {artists.length > 0 &&
               artists?.map((artist, index) => {
@@ -65,7 +81,10 @@ function ArtistsAndCreators() {
                 );
               })}
             {artists.length === 0 && (
-              <p className="col-span-2 font-semibold text-slate-400 dark:text-slate-100 lg:col-span-3">
+              <p
+                style={{ fontFamily: "jiggies" }}
+                className="col-span-2 font-semibold text-slate-400 dark:text-slate-100 lg:col-span-3"
+              >
                 No Gamers have joined.
               </p>
             )}
@@ -75,4 +94,4 @@ function ArtistsAndCreators() {
     );
 }
 
-export default ArtistsAndCreators;
+export default Gamer;

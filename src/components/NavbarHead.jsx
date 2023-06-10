@@ -73,7 +73,6 @@ export default function NavbarHead() {
       bg="transparent"
       sx={{ backdropFilter: "blur(5px)", borderBottom: 0 }}
       height={HEADER_HEIGHT}
-      mb={120}
     >
       <Container className={classes.inner} fluid>
         <Group>{/* <ProjectLogo /> */}</Group>
