@@ -170,7 +170,11 @@ function GamersCard({ artist }) {
                     state={{ object }}
                     className="bttn bttn-artist text-indigo-500 hover:text-[#ffffff] trans "
                   >
-                    <Button borderRadius="lg" variant="subtle">
+                    <Button
+                      className="tracking-wider ultra"
+                      radius="lg"
+                      variant="subtle"
+                    >
                       <Text className="ultra" size="sm">
                         View Profile
                       </Text>

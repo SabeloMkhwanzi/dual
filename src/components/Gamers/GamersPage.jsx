@@ -7,6 +7,7 @@ import { useLocation } from "react-router-dom";
 import { useProvider, useAccount, useSigner, useContract } from "wagmi";
 import { FACTORY_ADDRESS, FACTORY_ABI } from "../../constants/index";
 import CollectionCard from "../Collection/CollectionCard";
+import { Button, ActionIcon, Text, Image } from "@mantine/core";
 
 function GamersPage() {
   const { state } = useLocation();
@@ -41,29 +42,66 @@ function GamersPage() {
     <>
       <div className="flex flex-col w-full min-h-screen text-ld font-pop">
         <div className="relative w-[200px] h-[200px] mx-auto mt-12 bg-transparent rounded-full overflow-hidden">
-          <img
+          <Image
             src={`https://ipfs.io/ipfs/${imageUrl}`}
             alt=""
             className="absolute object-cover object-center w-full h-full"
+            sx={{
+              "&:hover": {
+                transform: "scale(1.03)",
+                transition: "transform 100ms ease, box-shadow 100ms ease",
+              },
+            }}
           />
         </div>
         <div className="flex flex-col items-center justify-center max-w-5xl gap-2 px-4 mx-auto mt-4">
           <div className="flex items-center justify-center gap-2">
-            <p className="text-center text-xl md:text-2xl dark:text-[#ffffff] font-medium">
+            <Text
+              sx={{ fontFamily: "jiggies" }}
+              className="text-center text-xl md:text-2xl text-[#ffffff] font-medium tracking-wide"
+            >
               {name}
-            </p>
-            <MdVerified className="w-6 h-6 white-600 " />
+            </Text>
+            <ActionIcon color="blue.9" variant="transparent">
+              <MdVerified className="w-6 h-6 " />
+            </ActionIcon>
           </div>
-          <p className="text-center text-sm md:text-base dark:text-[#ffffff]">
+          <Text className="text-center text-md md:text-base  text-[#ffffff] ultra tracking-wider">
             {bio}
-          </p>
+          </Text>
           <div className="flex items-center justify-center gap-4 pt-2">
-            <BiGlobe className="w-6 h-6 cursor-pointer text-slate-600 dark:text-white" />
-            <BsTwitter className="w-6 h-6 text-blue-600 cursor-pointer" />
+            <ActionIcon color="gray.6" variant="transparent">
+              <BiGlobe size="2rem" />
+            </ActionIcon>
+            <ActionIcon color="blue.9" variant="transparent">
+              <BsTwitter size="2rem" />
+            </ActionIcon>
           </div>
-          <div className="flex items-center justify-center gap-2 pt-2 text-indigo-600 cursor-pointer dark:text-indigo-500">
-            <BiGift className="w-6 h-6" />
-            <p>Send artist a tip</p>
+          <div className="flex items-center justify-center gap-2 pt-2 cursor-pointer">
+            <div className="flex items-center justify-center gap-4 pt-2">
+              <Button
+                className="tracking-wider ultra"
+                variant="default"
+                radius="lg"
+              >
+                Chat
+              </Button>
+              <Button
+                className="tracking-wider ultra"
+                variant="default"
+                radius="lg"
+              >
+                Dual Challenge
+              </Button>
+              <Button
+                className="tracking-wider ultra"
+                variant="default"
+                radius="lg"
+                leftIcon={<BiGift className="w-5 h-5" />}
+              >
+                Send a tip
+              </Button>
+            </div>
           </div>
         </div>
 
@@ -85,7 +123,9 @@ function GamersPage() {
         {artistContracts.length === 0 && (
           <>
             <div className="flex items-center justify-center w-full max-w-5xl mx-auto mt-8">
-              <h1 className="text-xl text-ld">No collections yet</h1>
+              <Text className="text-center text-lg lg:text-base  text-[#ffffff] ultra tracking-wider">
+                No collections yet
+              </Text>
             </div>
           </>
         )}
