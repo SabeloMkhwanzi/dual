@@ -1,7 +1,6 @@
 import React from "react";
 import {
   NavbarHead,
-  //Navbar,
   Home,
   Footer,
   SignUp,
@@ -19,7 +18,6 @@ function App() {
   return (
     <Router>
       <div className="font-mod flex flex-col relative overflow-x-hidden dark:bg-[#202020] transition-all duration-300 ease-in-out">
-        {/* <Navbar /> */}
         <NavbarHead />
         <div>
           <Toaster position="bottom-right" reverseOrder={false} />

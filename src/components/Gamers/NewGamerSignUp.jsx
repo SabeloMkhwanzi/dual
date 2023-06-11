@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FiUpload } from "react-icons/fi";
+import { IconFileUpload } from "@tabler/icons-react";
 import toast from "react-hot-toast";
 import LoadingModal from "../Modals/LoadingModal";
 import { pushImgToStorage, putJSONandGetHash } from "../../utils/storage";
 import { useProvider, useSigner, useContract } from "wagmi";
 import { ARTIST_CONTRACT_ADDRESS, ARTIST_ABI } from "../../constants/index";
+import { Button, Image, Input, Text, Textarea, Title } from "@mantine/core";
 
 function NewGamer() {
   const provider = useProvider();
@@ -81,17 +82,17 @@ function NewGamer() {
               src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
               alt="Logo"
             />
-            <h2 className="mt-6 text-xl font-semibold text-center sm:text-2xl md:text-3xl text-ld">
-              Sign up as an artist/creator
-            </h2>
-            <p className="mt-2 text-sm text-center text-ld">
-              Already an artist?{" "}
+            <Title size="h1" className="ultra" weight={500} align="center">
+              Sign up as an Gamer
+            </Title>
+            <Text mt={2} size="sm" align="center" className="ultra">
+              Already Signed?{" "}
               <Link to="/collection/create">
-                <span className="text-indigo-500 cursor-pointer">
+                <span className="text-blue cursor-pointer ultra underline">
                   Create a collection
                 </span>
               </Link>
-            </p>
+            </Text>
           </div>
 
           {/* Form */}
@@ -112,8 +113,8 @@ function NewGamer() {
                     htmlFor="profile-image"
                     className="flex flex-col items-center justify-center w-16 text-sm rounded-full cursor-pointer square aspect-square bg-slate-200 dark:bg-slate-400"
                   >
-                    <FiUpload className="text-ld text-[20px]" />
-                    <span className="text-ld text-[10px] cursor-pointer">
+                    <IconFileUpload className="text-ld text-[20px]" />
+                    <span className="text-ld  text-[10px] cursor-pointer">
                       Upload
                     </span>
                   </label>
@@ -127,12 +128,9 @@ function NewGamer() {
                 </div>
                 {/* Label for upload */}
                 <div className="pt-2">
-                  <label
-                    htmlFor=""
-                    className="-ml-8 text-sm font-medium text-ld"
-                  >
+                  <Text ml="-2rem" size="sm" fw="md" className="ultra">
                     Set a Profile photo
-                  </label>
+                  </Text>
                 </div>
               </div>
               {/* Preview */}
@@ -145,50 +143,57 @@ function NewGamer() {
                       className="object-cover object-center w-full h-full"
                     />
                   </div>
-                  <p className="text-sm font-medium text-ld">Preview</p>
+                  <Text align="centre" size="sm" fw="md" className="ultra">
+                    Preview
+                  </Text>
                 </div>
               )}
             </div>
             {/* Name Input */}
-            <div className="relative bg-inherit">
-              <input
-                type="text"
-                id="name"
-                required
-                className="mb-2 peer form-input"
-                placeholder="Enter your name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-              <label htmlFor="name" className="form-label trans">
-                Enter your name
-              </label>
-            </div>
+
+            <Input
+              type="text"
+              id="name"
+              required
+              placeholder="Enter your name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
 
             {/* Bio Input */}
-            <div className="relative bg-inherit">
-              <textarea
-                name="bio"
-                id="bio"
-                className="peer form-input"
-                placeholder="Tell your fans about yourself"
-                cols="30"
-                rows="2"
-                required
-                value={bio}
-                onChange={(e) => setBio(e.target.value)}
-              ></textarea>
-              <label htmlFor="bio" className="form-label trans">
-                Tell your fans about yourself
-              </label>
-            </div>
-            <p className="-mt-4 text-xs font-medium text-indigo-700 dark:text-indigo-400">
+
+            <Textarea
+              name="bio"
+              id="bio"
+              placeholder="Tell your fans about yourself"
+              cols="30"
+              rows="2"
+              required
+              value={bio}
+              onChange={(e) => setBio(e.target.value)}
+            ></Textarea>
+
+            <Text
+              align="centre"
+              mt="-4"
+              size="sm"
+              fw="md"
+              color="blue.9"
+              className="ultra"
+            >
               Max 100 words
-            </p>
+            </Text>
             {/* Signup button */}
-            <button className="bttn bttn-primary" type="submit">
+            <Button
+              sx={{ fontFamily: "ultra" }}
+              className="tracking-wider"
+              variant="default"
+              radius="lg"
+              size="xl"
+              type="submit"
+            >
               Register
-            </button>
+            </Button>
           </form>
         </div>
       </div>

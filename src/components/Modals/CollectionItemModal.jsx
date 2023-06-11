@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import { pushImgToStorage, putJSONandGetHash } from "../../utils/storage";
 
 import LoadingModal from "../Modals/LoadingModal";
-
+import { Button } from "@mantine/core";
 
 export default function CollectionItemModal({
   setShowForm,
@@ -49,7 +49,7 @@ export default function CollectionItemModal({
         const imgHash = await pushImgToStorage(image);
         console.log("Image hash: ", imgHash);
         //object to be pushed to collection page state
-        const itemObj = { itemName, description, imageUrl, qty, price};
+        const itemObj = { itemName, description, imageUrl, qty, price };
         //pushing object to collection page state
         setItemsObject((prev) => [...prev, itemObj]);
         //object to be hashed on ipfs
@@ -248,13 +248,17 @@ export default function CollectionItemModal({
                     </div>
                   </div>
                   <div className="bg-ld px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse sm:items-center justify-center">
-                    <button
-                      type="button"
-                      className="w-full inline-flex bttn-4 bttn-secondary sm:ml-3 sm:w-auto sm:text-sm focus:outline-none"
+                    <Button
+                      sx={{ fontFamily: "ultra" }}
+                      className="tracking-wider"
+                      variant="outline"
+                      color="gray.9"
+                      radius="lg"
+                      size="lg"
                       onClick={handleClick}
                     >
                       Add Item
-                    </button>
+                    </Button>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

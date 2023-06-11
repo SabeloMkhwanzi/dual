@@ -7,6 +7,7 @@ import { pushImgToStorage, putJSONandGetHash } from "../../utils/storage";
 import LoadingModal from "../Modals/LoadingModal";
 import toast from "react-hot-toast";
 import MintAllModal from "../Modals/MintAllModal";
+import { Button, Input, Table, Text, Textarea } from "@mantine/core";
 
 const CreateACollection = () => {
   const provider = useProvider();
@@ -117,22 +118,23 @@ const CreateACollection = () => {
         />
       )}
       <div className="w-full min-h-screen p-4 mx-auto text-ld md:py-20 max-w-7xl">
-        <h1 className="pb-4 text-3xl tracking-tighter text-center text-indigo-700 lg:text-5xl dark:text-indigo-500">
+        <Text
+          sx={{ color: "white" }}
+          className="pb-4 text-3xl tracking-tighter text-center text-white-700 lg:text-5xl ultra"
+        >
           Create a collection
-        </h1>
+        </Text>
 
         <div className="mx-auto">
           {/* COLLECTION PREVIEW IMAGE */}
           <div className="w-full py-2 md:w-1/2 md:mx-auto">
-            <p className="py-2 md:py-4 text-[12px]">
-              <Required />
-              Required fields
-            </p>
-            <p className="py-1 text-bold">
+            <Text sx={{ color: "white" }} className="py-1 text-bold">
               <Required />
               Choose a Collection Preview Image
-            </p>
-            <p className="text-xs">File types supported: JPG, PNG, GIF, SVG</p>
+            </Text>
+            <Text sx={{ color: "white" }} className="text-xs">
+              File types supported: JPG, PNG, GIF, SVG
+            </Text>
             <div className="max-w-[200px] overflow-hidden">
               <label
                 htmlFor="collection_image"
@@ -140,7 +142,9 @@ const CreateACollection = () => {
               >
                 <div className="my-4 w-[200px] h-[200px] border border-dashed border-gray-500 flex items-center justify-center">
                   {!image && (
-                    <span className="text-xl text-ld md:text-3xl">+</span>
+                    <Text size="xl" sx={{ color: "white" }}>
+                      +
+                    </Text>
                   )}
                   {image && (
                     <img
@@ -165,20 +169,20 @@ const CreateACollection = () => {
           <div className="w-full space-y-4 md:w-1/2 md:mx-auto">
             {/* Collection Name */}
             <div className="">
-              <label htmlFor="">
+              <Text sx={{ color: "white" }} className="ultra" htmlFor="">
                 <Required />
                 Collection Name
-              </label>
-              <input
+              </Text>
+              <Input
+                placeholder="Collection Name"
                 type="text"
                 id="name"
-                className="w-full mt-2 form-input"
                 value={name}
                 onChange={handleCollectionInfoChange}
               />
             </div>
             {/* External Link */}
-            <div className="">
+            {/* <div className="">
               <label htmlFor="">External link</label>
               <p className="text-xs">
                 Dual will include a link to this URL on this item's detail page,
@@ -192,37 +196,44 @@ const CreateACollection = () => {
                 value={link}
                 onChange={handleCollectionInfoChange}
               />
-            </div>
+            </div> */}
+
             {/* Description */}
             <div className="">
-              <label htmlFor="">
+              <Text sx={{ color: "white" }} className="ultra" htmlFor="">
                 <Required />
                 Description
-              </label>
-              <textarea
+              </Text>
+              <Textarea
                 name=""
                 id="description"
                 cols="30"
                 rows="10"
-                className="w-full mt-2 form-input"
                 placeholder="Tell us about this collection"
                 value={description}
                 onChange={handleCollectionInfoChange}
-              ></textarea>
+              ></Textarea>
             </div>
           </div>
           {/* Show Form Button */}
           <div className="mt-8 lg:mt-16">
-            <h1 className="pb-4 mb-6 text-3xl tracking-tighter text-center text-indigo-700 lg:text-4xl dark:text-indigo-500">
+            <Text
+              sx={{ color: "white" }}
+              className="pb-4 mb-6 text-3xl tracking-tighter text-center text-white-700 lg:text-4xl ultra"
+            >
               Add Items to the collection
-            </h1>
+            </Text>
             <div className="flex items-center justify-center mx-auto">
-              <button
+              <Button
                 onClick={() => setShowForm(true)}
-                className="bttn-4 bttn-primary"
+                sx={{ fontFamily: "ultra" }}
+                className="tracking-wider"
+                variant="default"
+                radius="lg"
+                size="xl"
               >
                 Add an Item
-              </button>
+              </Button>
             </div>
           </div>
         </div>
@@ -231,11 +242,14 @@ const CreateACollection = () => {
 
         {itemsObject.length > 0 ? ( // If there are items in the array of itemsObject
           <div className="relative my-8 overflow-x-auto shadow-md sm:rounded-lg">
-            <div classNameName="text-left w-full text-3xl text-semibold text-indigo-700 dark:text-indigo-500 my-4">
+            <div
+              sx={{ color: "white" }}
+              classNameName="text-left w-full text-3xl text-semibold text-indigo-700 ultra my-4"
+            >
               COLLECTION ITEMS
             </div>
-            <table className="w-full text-sm text-left text-gray-500 table-auto dark:text-gray-400">
-              <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <Table className="w-full text-sm text-left text-gray-500 table-auto">
+              <thead className="text-xs text-gray-700 uppercase bg-gray-50">
                 <tr>
                   <th scope="col" className="px-6 py-3">
                     #
@@ -259,18 +273,15 @@ const CreateACollection = () => {
               </thead>
               <tbody>
                 {itemsObject.map((item, index) => (
-                  <tr
-                    className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
-                    key={index}
-                  >
+                  <tr className="bg-white border-b " key={index}>
                     <th
                       scope="row"
-                      className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                      className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
                     >
                       {index + 1}
                     </th>
                     <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      <div className=" w-14 square aspect-square rounded-full border-[3px] border-indigo-600 overflow-hidden">
+                      <div className=" w-14 square aspect-square rounded-full border-[3px] overflow-hidden">
                         <img
                           src={item.imageUrl}
                           alt="Preview"
@@ -285,15 +296,22 @@ const CreateACollection = () => {
                   </tr>
                 ))}
               </tbody>
-            </table>
+            </Table>
           </div>
         ) : null}
 
         {items.length > 0 ? (
           <div className="flex items-center justify-center mx-auto">
-            <button className="bttn-4 bttn-primary" onClick={createCollection}>
+            <Button
+              sx={{ fontFamily: "ultra" }}
+              className="tracking-wider"
+              variant="default"
+              radius="lg"
+              size="xl"
+              onClick={createCollection}
+            >
               Create Collection
-            </button>
+            </Button>
           </div>
         ) : null}
       </div>

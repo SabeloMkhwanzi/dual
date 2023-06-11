@@ -89,7 +89,12 @@ export function Home() {
 
             <Group mt={30}>
               <Link to="/gamer_challenger">
-                <Button radius="md" size="md" className={classes.control}>
+                <Button
+                  variant="outline"
+                  radius="md"
+                  size="md"
+                  className={classes.control}
+                >
                   Explore
                 </Button>
               </Link>

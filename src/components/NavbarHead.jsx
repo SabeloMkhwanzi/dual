@@ -170,9 +170,7 @@ export default function NavbarHead() {
 
         <Group className={classes.linkLabel}>
           {/* <PushNotifiction /> */}
-          <div className={classes.links}>
-            <ColorModeButton />
-          </div>
+          <div className={classes.links}>{/* <ColorModeButton /> */}</div>
           <ConnectWallet />
         </Group>
       </Container>
