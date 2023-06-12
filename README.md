@@ -19,7 +19,8 @@ We leverage the decentralized storage of Filecoin through web3.storage to secure
 
 #### Smart Contract
 
-- The project used the open zeppelin ERC1155 token standard to implement the collections. The factory contract handles the creation of every collection on the DualNFT platform.
+- The project used the open zeppelin ERC1155 token standard to implement the collections. The factory contract handles the creation of every collection on the Dual platform.
+- Links to our project smart contracts [here](https://github.com/SabeloMkhwanzi/dual-smart-contract)
 
 #### Decentralized Storage
 
